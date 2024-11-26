@@ -21,6 +21,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'document_number',
+        'role_id',
     ];
 
     /**
@@ -42,4 +44,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    public function hasPermission($permissionName)
+    {
+        return $this->role->permissions->contains('name', $permissionName);
+    }
 }
