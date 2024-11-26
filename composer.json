@@ -1,5 +1,5 @@
 {
-    "name": "Reideh17/roles-permisos",
+    "name": "laravel/laravel",
     "type": "project",
     "description": "Aplicativo para roles y permiso base para proyectos grandes",
     "keywords": ["laravel", "framework", "api", "dashboard"],
@@ -29,6 +29,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
+            "App\\Helpers\\": "app/Helpers/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }
@@ -57,7 +58,7 @@
         "laravel": {
             "dont-discover": []
         },
-        "version": "0.0.1"  /*para ur actualizando los tags */
+        "version": "0.0.1"
     },
     "config": {
         "optimize-autoloader": true,
